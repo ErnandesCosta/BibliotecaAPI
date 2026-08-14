@@ -50,6 +50,13 @@ public class LivroRepository : ILivroRepository
             .FirstOrDefaultAsync(livro => livro.Id == id);
     }
 
+    public async Task<Livro?> BuscarPorIdComRastreamentoAsync(
+        int id)
+    {
+        return await _context.Livros
+            .FirstOrDefaultAsync(livro => livro.Id == id);
+    }
+
     public async Task AdicionarAsync(Livro livro)
     {
         await _context.Livros.AddAsync(livro);

@@ -10,6 +10,9 @@ public interface ILivroRepository
 
     Task<Livro?> BuscarPorIdAsync(int id);
 
+    Task<Livro?> BuscarPorIdComRastreamentoAsync(
+        int id);
+
     Task AdicionarAsync(Livro livro);
 
     Task SalvarAlteracoesAsync();
