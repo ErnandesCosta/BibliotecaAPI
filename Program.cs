@@ -46,6 +46,14 @@ builder.Services.AddScoped<
     ILivroService,
     LivroService>();
 
+builder.Services.AddScoped<
+    IAlunoRepository,
+    AlunoRepository>();
+
+builder.Services.AddScoped<
+    IAlunoService,
+    AlunoService>();
+
 // Configura Swagger/OpenAPI.
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
